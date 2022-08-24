@@ -1,8 +1,26 @@
 <head>
-    <title>Test Page: Don't Panic</title>
+    {% if page.title %}
+        <title>{{ page.title }} | Test Page</title>
+    {% else %}
+        <title>Test Page: Don't Panic</title>
+    {% endif%}
+    {% if page.description %}
+        <meta name="description" content="{{ page.description }}">
+    {% else %}
+        <meta name="description" content="This is a dangerous site">
+    {% endif %}
+    <meta property="og:title" content="{{ page.title }}" />
+    <meta property="og:url" content="{{ page.url }}"/>
+    <meta property="og:image" content="images/shark.jpg" />
+    <link href="/favicon.png" rel="icon">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png"
     <meta charset="utf-8" />
     <style> </style>
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@100&family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9089de26c0.js" crossorigin="anonymous"></script>
 </head>
